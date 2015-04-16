@@ -5,7 +5,7 @@ permalink: /sessions/session-2/
 published: true
 accepted: true
 
-title: Session 2
+title: Session 2 has a very long title
 summary: A short summary of your session description.
 presenters: Presenter 1, Presenter 2
 track: Development

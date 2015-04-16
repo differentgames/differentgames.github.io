@@ -1,19 +1,31 @@
 {% assign days = site.sessions | group_by:"day" | sort: "name" %}
-
 {% for day in days %}
+  {% assign rooms = day.items | group_by: "room" | map: "name" %}
+  {% assign times = day.items | group_by: "time" | map: "name" %}
   <h3>{{ day.name }}</h3>
-
-  {% assign rooms = day.items | group_by:"room" %}
-
-  {% for room in rooms %}
-   <p><strong>{{ room.name | upcase }}</strong></p>
-
-   {% for post in room.items | sort: "time" %}
-     <p>
-       {{ post.time }}:
-       <a href="{{ post.permalink }}">{{ post.title }}</a>
-     </p>
-   {% endfor %}
-
-  {% endfor %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th></th>
+        {% for room in rooms %}
+          <th>{{ room }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for time in times %}
+        <tr>
+          <th>{{time}}</th>
+          {% for room in rooms %}
+            {% assign session = day.items | where: "room", room | where: "time", time | first %}
+            <td>
+              {% if session %}
+                <a href="{{session.permalink}}">{{ session.title }}</a>
+              {% endif %}
+            </td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 {% endfor %}
