@@ -1,7 +1,7 @@
 {% assign days = site.sessions | group_by:"day" | sort: "name" %}
 {% for day in days %}
-  {% assign rooms = day.items | group_by: "room" | map: "name" %}
-  {% assign times = day.items | group_by: "time" | map: "name" %}
+  {% assign rooms = day.items | group_by: "room" | map: "name" | sort %}
+  {% assign times = day.items | group_by: "time" | map: "name" | sort %}
   <h3>{{ day.name }}</h3>
   <table class="table table-striped">
     <thead>

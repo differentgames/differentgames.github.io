@@ -12,7 +12,7 @@ track: Development
 difficulty: msonnabaum
 
 day: Saturday
-time: 9:30am
+time: 09:30am
 room: Room 1
 ---
 
