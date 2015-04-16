@@ -1,0 +1,19 @@
+{% assign days = site.sessions | group_by:"day" | sort: "name" %}
+
+{% for day in days %}
+  <h3>{{ day.name }}</h3>
+
+  {% assign rooms = day.items | group_by:"room" %}
+
+  {% for room in rooms %}
+   <p><strong>{{ room.name | upcase }}</strong></p>
+
+   {% for post in room.items | sort: "time" %}
+     <p>
+       {{ post.time }}:
+       <a href="{{ post.permalink }}">{{ post.title }}</a>
+     </p>
+   {% endfor %}
+
+  {% endfor %}
+{% endfor %}
