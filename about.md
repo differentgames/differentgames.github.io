@@ -1,11 +1,6 @@
 ---
 layout: page
-title: About
+title: What is Different Games?
 permalink: /about/
 ---
-
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+As game designers, academics, journalists and players operate in separate spheres, we see Different Games as an opportunity to share across and outside of professional boundaries. By presenting games, scholarship and hands-on workshops engaged with issues of diversity and inclusion we seek to build new connections and foster a unique dialogue between artistic, academic and commercial practice. We welcome folks from all corners of the games community invested in games as creative, critical tools and committed to seeing games reflect the complexity, depth and diversity of all involved.

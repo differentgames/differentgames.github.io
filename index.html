@@ -2,22 +2,25 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="jumbotron">
+  <h1>Different Games</h1>
+  <p>
+    An annual student- and volunteer-led conference on diversity
+    and inclusivity in games.
+  </p>
 </div>
+
+<div class="container">
+  <div class="col-xs-6 text-center">
+    <p><i class="fa fa-clock-o"></i> When</p>
+    <h1>April 3-4, 2015</h1>
+    <p>Starts at 5pm</p>
+  </div>
+
+  <div class="col-xs-6 text-center">
+    <p><i class="fa fa-map-marker"></i> Where</p>
+    <h1>Brooklyn, NY</h1>
+    <p>NYU Magnet Center</p>
+  </div>
+</div>
+
