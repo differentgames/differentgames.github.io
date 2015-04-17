@@ -1,13 +1,15 @@
 ---
 layout: default
 category: session
-permalink: /sessions/session-1/
 published: true
 accepted: true
+id: session-1
+permalink: /program#session-1
 
 title: Session 1
 summary: A short summary of your session description.
-presenters: Presenter 1, Presenter 2
+presenters:
+  - Presenter 1
 track: Development
 difficulty: msonnabaum
 

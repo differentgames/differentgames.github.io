@@ -1,13 +1,16 @@
 ---
 layout: default
 category: session
-permalink: /sessions/session-3/
 published: true
 accepted: true
+id: session-3
+permalink: /program#session-3
 
 title: Session 3
 summary: A short summary of your session description.
-presenters: Presenter 1, Presenter 2
+presenters:
+  - Presenter 3
+  - Presenter 4
 track: Development
 difficulty: msonnabaum
 

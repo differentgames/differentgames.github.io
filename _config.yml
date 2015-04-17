@@ -15,3 +15,5 @@ markdown: kramdown
 collections:
   sessions:
     output: true
+  presenters:
+    output: false
