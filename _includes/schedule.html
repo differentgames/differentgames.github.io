@@ -15,7 +15,7 @@
     <tbody>
       {% for time in times %}
         <tr>
-          <th>{{time}}</th>
+          <th class="col-xs-1">{{time}}</th>
           {% for room in rooms %}
             {% assign session = day.items | where: "room", room | where: "time", time | first %}
             <td>
