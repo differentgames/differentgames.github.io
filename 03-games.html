@@ -1,0 +1,21 @@
+---
+layout: page
+title: Arcade
+permalink: /games/
+---
+{% assign games = site.games | sort: "title" %}
+{% for game in games %}
+  <h2>{{ game.title }}</h2>
+  <h3>By {{ game.presenters | array_to_sentence_string }}</h3>
+  {{ game.content }}
+  {% for presenterName in game.presenters %}
+    {% assign presenter = site.presenters | where: "name", presenterName | first %}
+    <div class="media">
+      <div class="media-left"><img class="media-object" src="{{ presenter.image }}"></img></div>
+      <div class="media-body">
+        <h4 class="media-heading">{{ presenter.name }}</h4>
+        {{ presenter.content }}
+      </div>
+    </div>
+  {% endfor %}
+{% endfor %}
